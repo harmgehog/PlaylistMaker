@@ -5,120 +5,131 @@
     android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     android:padding="@dimen/medium_padding"
     tools:context=".SettingsActivity">
 
-    <Button
+    <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/white"
-        android:navigationIcon="@drawable/ic_back_arrow"
-        android:onClick="onBackPress"
+        android:layout_marginBottom="@dimen/toolbar_margin"
         android:layout_weight="1"
-        android:text="@string/settings"
-        android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="@dimen/header_text_size"
-        app:icon="@drawable/ic_back_arrow"
-        app:iconPadding="20dp"
-        app:iconTint="@color/black" />
+        android:gravity="center"
+        android:onClick="onBackPress">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@drawable/ic_back_arrow"
+            android:onClick="onBackPress"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:onClick="onBackPress"
+            android:paddingStart="@dimen/medium_padding"
+            android:text="@string/settings"
+            android:textSize="@dimen/header_text_size" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:text="@string/night_mode" />
 
         <Switch
             android:id="@+id/switch1"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="48dp"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@string/user_agreement"
+            android:paddingEnd="-10dp"
+            android:scaleType="fitEnd"
             tools:ignore="NestedWeights,UseSwitchCompatOrMaterialXml" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:text="@string/share_app" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:ignore="NestedWeights" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@string/user_agreement"
+            android:scaleType="fitEnd"
             app:srcCompat="@drawable/ic_share" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:gravity="center">
 
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:text="@string/support" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:ignore="NestedWeights" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@string/user_agreement"
+            android:scaleType="fitEnd"
             app:srcCompat="@drawable/ic_support" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:text="@string/user_agreement" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:ignore="NestedWeights" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAlignBottom="false"
             android:contentDescription="@string/user_agreement"
-            android:minHeight="48dp"
+            android:scaleType="fitEnd"
             app:srcCompat="@drawable/ic_user_agreement" />
     </LinearLayout>
 
@@ -126,7 +137,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="8"
-        tools:ignore="UselessLeaf" />
+        android:gravity="center" />
 
 
 </LinearLayout>

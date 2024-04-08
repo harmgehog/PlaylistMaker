@@ -9,21 +9,39 @@
     android:padding="@dimen/medium_padding"
     tools:context=".SearchActivity">
 
-    <Button
+    <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/white"
-        android:navigationIcon="@drawable/ic_back_arrow"
-        android:onClick="onBackPress"
+        android:layout_marginBottom="@dimen/toolbar_margin"
         android:layout_weight="1"
-        android:text="@string/search"
-        android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="@dimen/header_text_size"
-        app:icon="@drawable/ic_back_arrow"
-        app:iconPadding="20dp"
-        app:iconTint="@color/black" />
+        android:gravity="center"
+        android:onClick="onBackPress">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAlignBottom="false"
+            android:contentDescription="@drawable/ic_back_arrow"
+            android:onClick="onBackPress"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:onClick="onBackPress"
+            android:paddingStart="@dimen/medium_padding"
+            android:text="@string/search"
+            android:textSize="@dimen/header_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:gravity="center" />
 
 </LinearLayout>
