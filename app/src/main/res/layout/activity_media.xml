@@ -7,29 +7,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    android:padding="@dimen/medium_padding"
     tools:context=".MediaActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:onClick="onBackPress"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_marginBottom="@dimen/toolbar_margin_bottom"
         android:background="@color/white"
-        android:layout_marginBottom="@dimen/header_margin_bottom"
-        android:layout_marginTop="@dimen/header_margin"
-        android:layout_marginStart="@dimen/header_margin"
+        android:onClick="onBackPress"
         app:navigationIcon="@drawable/ic_back_arrow"
         app:title="@string/media"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/black"
-        app:contentInsetStartWithNavigation="0dp"
-        android:foreground="?attr/selectableItemBackground"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="12"
-        android:gravity="center" />
-
+        app:titleTextColor="@color/black" />
 
 </LinearLayout>

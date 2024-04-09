@@ -1,129 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical"
-    android:padding="@dimen/medium_padding"
-    tools:context=".SettingsActivity">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:onClick="onBackPress"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_marginBottom="@dimen/toolbar_margin_bottom"
         android:background="@color/white"
-        android:layout_marginBottom="@dimen/header_margin_bottom"
-        android:layout_marginTop="@dimen/header_margin"
-        android:layout_marginStart="@dimen/header_margin"
+        android:onClick="onBackPress"
         app:navigationIcon="@drawable/ic_back_arrow"
         app:title="@string/settings"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/black"
-        app:contentInsetStartWithNavigation="0dp"
-        android:foreground="?attr/selectableItemBackground"/>
+        app:titleTextColor="@color/black" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/night_mode" />
-
-        <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/nightMode"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAlignBottom="false"
-            android:contentDescription="@string/user_agreement"
-            android:paddingEnd="-10dp"
-            android:scaleType="fitEnd"
-            tools:ignore="NestedWeights,UseSwitchCompatOrMaterialXml" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/medium_padding"
+            android:text="@string/night_mode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:drawableRightCompat="@drawable/ic_switch_light" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/share_app" />
-
-        <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/share"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAlignBottom="false"
-            android:contentDescription="@string/user_agreement"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/ic_share" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
-
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/medium_padding"
+            android:text="@string/share_app"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:drawableRightCompat="@drawable/ic_share" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/support" />
-
-        <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/support"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAlignBottom="false"
-            android:contentDescription="@string/user_agreement"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/ic_support" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/medium_padding"
+            android:text="@string/support"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:drawableRightCompat="@drawable/ic_support" />
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/user_agreement" />
-
-        <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/terms"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAlignBottom="false"
-            android:contentDescription="@string/user_agreement"
-            android:scaleType="fitEnd"
-            app:srcCompat="@drawable/ic_user_agreement" />
+            android:layout_height="@dimen/settings_row_height"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:gravity="start|center_vertical"
+            android:padding="@dimen/medium_padding"
+            android:text="@string/user_agreement"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            app:drawableRightCompat="@drawable/ic_user_agreement" />
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
-        android:gravity="center" />
-
 
 </LinearLayout>

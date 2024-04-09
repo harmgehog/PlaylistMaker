@@ -2,11 +2,10 @@
 <resources>
     <dimen name="medium_padding">16dp</dimen>
     <dimen name="corner_radius">16dp</dimen>
-
     <dimen name="header_text_size">22sp</dimen>
     <dimen name="text_size">16sp</dimen>
-    <dimen name="marginBottom">10dp</dimen>
-    <dimen name="toolbar_margin">30dp</dimen>
-    <dimen name="header_margin_bottom">24dp</dimen>
-    <dimen name="header_margin">-16dp</dimen>
+    <dimen name="icon_padding">8dp</dimen>
+    <dimen name="toolbar_margin_bottom">24dp</dimen>
+    <dimen name="settings_row_height">61dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
 </resources>
