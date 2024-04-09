@@ -10,34 +10,20 @@
     android:padding="@dimen/medium_padding"
     tools:context=".MediaActivity">
 
-    <LinearLayout
-        android:id="@+id/toolbar"
+    <androidx.appcompat.widget.Toolbar
+        android:onClick="onBackPress"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="@dimen/toolbar_margin"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:onClick="onBackPress">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:baselineAlignBottom="false"
-            android:contentDescription="@drawable/ic_back_arrow"
-            android:onClick="onBackPress"
-            android:scaleType="fitStart"
-            app:srcCompat="@drawable/ic_back_arrow" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:onClick="onBackPress"
-            android:paddingStart="@dimen/medium_padding"
-            android:text="@string/media"
-            android:textSize="@dimen/header_text_size" />
-
-    </LinearLayout>
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/header_margin_bottom"
+        android:layout_marginTop="@dimen/header_margin"
+        android:layout_marginStart="@dimen/header_margin"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:title="@string/media"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/black"
+        app:contentInsetStartWithNavigation="0dp"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <LinearLayout
         android:layout_width="match_parent"
