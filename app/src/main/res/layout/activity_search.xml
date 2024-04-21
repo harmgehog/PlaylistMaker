@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/media"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".SearchActivity">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_marginBottom="@dimen/toolbar_margin_bottom"
-        android:background="@color/white"
-        android:onClick="onBackPress"
+        android:layout_height="@dimen/toolbar_56dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:contentInsetStartWithNavigation="0dp"
         app:navigationIcon="@drawable/ic_back_arrow"
-        app:title="@string/search"
+        app:title="@string/search_text"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/black" />
+        app:titleTextColor="?attr/colorOnPrimary" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/large_padding"
+        android:layout_marginVertical="@dimen/small_padding">
+
+        <EditText
+            android:id="@+id/search_bar"
+            style="@style/SearchEditViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:autofillHints="" />
+
+        <ImageView
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="14dp"
+            android:src="@drawable/cancel_icon"
+            android:visibility="gone"
+            app:tint="?attr/colorOnSecondary" />
+    </FrameLayout>
 
 </LinearLayout>

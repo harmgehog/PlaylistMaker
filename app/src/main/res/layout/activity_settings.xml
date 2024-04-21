@@ -3,79 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_marginBottom="@dimen/toolbar_margin_bottom"
-        android:background="@color/white"
-        android:onClick="onBackPress"
+        android:layout_height="@dimen/toolbar_56dp"
         app:navigationIcon="@drawable/ic_back_arrow"
         app:title="@string/settings"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/black" />
+        app:contentInsetStartWithNavigation="0dp"
+        android:layout_marginBottom="@dimen/toolbar_margin_24dp"/>
 
-
-    <LinearLayout
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/dark_theme"
+        style="@style/SettingsViewStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="@dimen/settings_row_height"
+        android:text="@string/darkTheme" />
 
-        <TextView
-            android:id="@+id/nightMode"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_row_height"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:gravity="start|center_vertical"
-            android:padding="@dimen/medium_padding"
-            android:text="@string/night_mode"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"
-            app:drawableRightCompat="@drawable/ic_switch_light" />
+    <TextView
+        android:id="@+id/share"
+        style="@style/SettingsViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_row_height"
+        android:text="@string/share"
+        app:drawableRightCompat="@drawable/ic_share" />
 
-        <TextView
-            android:id="@+id/share"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_row_height"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:gravity="start|center_vertical"
-            android:padding="@dimen/medium_padding"
-            android:text="@string/share_app"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"
-            app:drawableRightCompat="@drawable/ic_share" />
 
-        <TextView
-            android:id="@+id/support"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_row_height"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:gravity="start|center_vertical"
-            android:padding="@dimen/medium_padding"
-            android:text="@string/support"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"
-            app:drawableRightCompat="@drawable/ic_support" />
+    <TextView
+        android:id="@+id/support"
+        style="@style/SettingsViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_row_height"
+        android:text="@string/support"
+        app:drawableRightCompat="@drawable/ic_support" />
 
-        <TextView
-            android:id="@+id/terms"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/settings_row_height"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:gravity="start|center_vertical"
-            android:padding="@dimen/medium_padding"
-            android:text="@string/user_agreement"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"
-            app:drawableRightCompat="@drawable/ic_user_agreement" />
+    <TextView
+        android:id="@+id/terms"
+        style="@style/SettingsViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_row_height"
+        android:text="@string/terms"
+        app:drawableRightCompat="@drawable/ic_arrow_forward" />
 
-    </LinearLayout>
 
 </LinearLayout>

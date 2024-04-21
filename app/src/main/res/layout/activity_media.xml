@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/media"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    tools:context=".MediaActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:layout_marginBottom="@dimen/toolbar_margin_bottom"
-        android:background="@color/white"
-        android:onClick="onBackPress"
+        android:layout_height="@dimen/toolbar_56dp"
+        android:layout_marginBottom="@dimen/toolbar_margin_24dp"
         app:navigationIcon="@drawable/ic_back_arrow"
-        app:title="@string/media"
+        app:title="@string/library_text"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@color/black" />
+        app:titleTextColor="?attr/colorOnPrimary"
+        app:contentInsetStartWithNavigation="0dp"
+        android:foreground="?attr/selectableItemBackground"/>
 
 </LinearLayout>
