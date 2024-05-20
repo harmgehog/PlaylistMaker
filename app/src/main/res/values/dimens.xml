@@ -12,4 +12,9 @@
     <dimen name="big_icon_size">24dp</dimen>
     <dimen name="toolbar_56dp">56dp</dimen>
     <dimen name="toolbar_margin_24dp">24dp</dimen>
+    <dimen name="main_text_size">16sp</dimen>
+    <dimen name="small_text_size">11sp</dimen>
+    <dimen name="settings_album_image_size">45dp</dimen>
+    <dimen name="settings_track_text_padding">14dp</dimen>
+
 </resources>

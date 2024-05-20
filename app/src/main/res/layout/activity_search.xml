@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/colorPrimary"
     android:orientation="vertical">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_56dp"
-        android:foreground="?attr/selectableItemBackground"
-        app:contentInsetStartWithNavigation="0dp"
+        android:layout_height="56dp"
         app:navigationIcon="@drawable/ic_back_arrow"
         app:title="@string/search_text"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="?attr/colorOnPrimary" />
+        app:titleTextColor="?attr/colorOnPrimary"
+        app:contentInsetStartWithNavigation="0dp"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -34,10 +35,19 @@
             android:layout_width="@dimen/small_icon_size"
             android:layout_height="@dimen/small_icon_size"
             android:layout_gravity="center_vertical|end"
+            android:src="@drawable/ic_cancel_icon"
+            app:tint="?attr/colorOnSecondary"
             android:layout_marginEnd="14dp"
-            android:src="@drawable/cancel_icon"
-            android:visibility="gone"
-            app:tint="?attr/colorOnSecondary" />
+            android:visibility="gone" />
     </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/search_item"
+        android:layout_marginTop="@dimen/large_padding">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
