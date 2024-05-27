@@ -7,14 +7,13 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SwitchCompat
 import androidx.appcompat.widget.Toolbar
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
+
         setContentView(R.layout.activity_settings)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.setNavigationOnClickListener{
@@ -22,12 +21,11 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         val swDarkTheme = findViewById<SwitchCompat>(R.id.dark_theme)
-        swDarkTheme.setOnClickListener {
-            if (swDarkTheme.isChecked)
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            else
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        swDarkTheme.isChecked = (applicationContext as App).darkTheme
+        swDarkTheme.setOnCheckedChangeListener { switcher, checked ->
+            (applicationContext as App).switchTheme(checked)
         }
+
 
         val lineShare = findViewById<TextView>(R.id.share)
         lineShare.setOnClickListener {
