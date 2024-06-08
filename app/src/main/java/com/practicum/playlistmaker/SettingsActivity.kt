@@ -15,6 +15,9 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_settings)
+        window.statusBarColor = resources.getColor(R.color.status_bar, theme)
+        window.navigationBarColor = resources.getColor(R.color.navigation_bar, theme)
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.setNavigationOnClickListener{
             onBackPressedDispatcher.onBackPressed()
@@ -25,7 +28,6 @@ class SettingsActivity : AppCompatActivity() {
         swDarkTheme.setOnCheckedChangeListener { switcher, checked ->
             (applicationContext as App).switchTheme(checked)
         }
-
 
         val lineShare = findViewById<TextView>(R.id.share)
         lineShare.setOnClickListener {
