@@ -3,13 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
     android:orientation="vertical">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_56dp"
-        android:layout_marginBottom="@dimen/toolbar_margin_24dp"
+        android:layout_height="56dp"
         app:navigationIcon="@drawable/ic_back_arrow"
         app:title="@string/library_text"
         app:titleTextAppearance="@style/Toolbar.TitleText"

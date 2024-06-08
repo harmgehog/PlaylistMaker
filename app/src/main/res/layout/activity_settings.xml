@@ -3,49 +3,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_56dp"
+        android:layout_height="56dp"
         app:navigationIcon="@drawable/ic_back_arrow"
+        app:tint="?attr/colorOnPrimary"
         app:title="@string/settings"
         app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="?attr/colorOnPrimary"
         app:contentInsetStartWithNavigation="0dp"
-        android:layout_marginBottom="@dimen/toolbar_margin_24dp"/>
+        android:foreground="?attr/selectableItemBackground"/>
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/dark_theme"
-        style="@style/SettingsViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_row_height"
-        android:text="@string/darkTheme" />
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/dark_theme"
+            style="@style/SettingsViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:text="@string/darkTheme"
+            android:layout_marginTop="24dp" />
 
-    <TextView
-        android:id="@+id/share"
-        style="@style/SettingsViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_row_height"
-        android:text="@string/share"
-        app:drawableRightCompat="@drawable/ic_share" />
+        <TextView
+            android:id="@+id/share"
+            style="@style/SettingsViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:text="@string/share"
+            app:drawableRightCompat="@drawable/ic_share" />
 
 
-    <TextView
-        android:id="@+id/support"
-        style="@style/SettingsViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_row_height"
-        android:text="@string/support"
-        app:drawableRightCompat="@drawable/ic_support" />
+        <TextView
+            android:id="@+id/support"
+            style="@style/SettingsViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:text="@string/support"
+            app:drawableRightCompat="@drawable/ic_support" />
 
-    <TextView
-        android:id="@+id/terms"
-        style="@style/SettingsViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/settings_row_height"
-        android:text="@string/terms"
-        app:drawableRightCompat="@drawable/ic_arrow_forward" />
+        <TextView
+            android:id="@+id/terms"
+            style="@style/SettingsViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/settings_row_height"
+            android:text="@string/terms"
+            app:drawableRightCompat="@drawable/ic_arrow_forward" />
 
 
 </LinearLayout>
